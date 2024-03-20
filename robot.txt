@@ -1,0 +1,5 @@
+# robots.txt created by umarulharry
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Sitemap: https://tahad.co/sitemap.xml
