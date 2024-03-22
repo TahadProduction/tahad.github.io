@@ -18,4 +18,5 @@
 .default-content p {
 	  text-align: justify;
     word-spacing: -1px; /* Adjust as needed */
+    hyphens: auto;
 }

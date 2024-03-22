@@ -46,6 +46,7 @@
   padding: 10px 18px;
   text-align: justify;
   word-spacing: -1px; /* Adjust as needed */
+  hyphens: auto;
   margin-left: 10px;
   margin-right: 10px;
 }
