@@ -1,0 +1,128 @@
+	#heroBanner {
+		    position: relative;
+		    width: 100%;
+		    height: 100vh;
+		    overflow: hidden;
+		    margin-bottom: 0px;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    z-index: 0;
+		}
+
+		#heroBanner img {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    object-fit: cover; /* Ensures the image covers the entire container */
+		    z-index: -1; /* Set a lower z-index for the image to keep it behind other content */
+		    mask-image: linear-gradient(to top, transparent 20%, black); /* Mask with linear gradient */
+    -webkit-mask-image: linear-gradient(to top, transparent 20%, black); /* For webkit browsers */
+		}
+
+		/.content-wrapper {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    z-index: 1;
+		    text-align: center;
+		    max-width: 600px; /* Adjust the value as needed */
+		    width: 90%; /* Optional: Set a percentage width to ensure responsiveness */
+		    margin: 0 auto; /* Center the element horizontally */
+		}
+
+
+	.name, .outline-name {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -230%);
+            text-align: center;
+            font-size: clamp(1.7rem, 4vw, 6rem);
+            font-family: var(--font-family);
+            white-space: nowrap; /* Prevent line breaks */
+            overflow: hidden; /* Hide overflowed text */
+        }
+
+        .name {
+            z-index: 1; /* Ensure title is above outline text */
+            color: transparent; /* Transparent text */
+            -webkit-text-stroke: 2px var(--secondary-color); /* Outline */
+            text-stroke: 2px #333; /* Outline */
+            animation: fadeInAndExpand 3s ease forwards; /* Adjust duration to slow down */
+        }
+
+        .outline-name {
+            z-index: 0; /* Ensure outline text is behind title */
+            color: var(--secondary-color); /* Text color */
+            animation: fadeInAndExpand 3s ease forwards; /* Adjust duration to slow down */
+        }
+
+        @keyframes fadeInAndExpand {
+            from {
+                letter-spacing: 5px;
+                opacity: 0;
+            }
+            to {
+                letter-spacing: normal;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .desc {
+		    top: 50%;
+		    left: 50%; /* horizontally center */
+		    transform: translate(-50%, -50%);
+		    position: absolute;
+		    z-index: 1;
+		    color: var(--secondary-color);
+		    font-size: clamp(1rem, 2vw, 2rem);
+		    animation: fadeIn 2s ease forwards;
+		    text-align: center; /* horizontally center the text */
+		    white-space: nowrap;
+		}
+
+		.social-media-buttons {
+		    position: absolute;
+		    bottom: 5%;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    z-index: 1;
+		    text-align: center; /* Center align all buttons */
+		}
+
+		.contact-buttons {
+		    margin-bottom: clamp(6rem, 5vw, 8rem); /* Add some space between the button groups */
+		}
+
+		.contact-buttons a {
+		    display: inline-block;
+		    margin: 0 10px;
+		    text-decoration: none;
+		    color: var(--secondary-color); /* Adjust color as needed */
+		    font-size: clamp(2.5rem, 5vw, 6rem); /* Adjust size as needed */
+		}
+
+		.other-buttons a {
+		    display: inline-block;
+		    margin: 0 10px;
+		    text-decoration: none;
+		    color: var(--secondary-color); /* Adjust color as needed */
+		    font-size: 20px; /* Adjust size as needed */
+		}
+
+		.contact-buttons a:hover,
+		.other-buttons a:hover {
+		    color: var(--tertiary-color); /* Adjust hover color as needed */
+		}

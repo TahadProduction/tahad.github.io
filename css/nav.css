@@ -1,0 +1,57 @@
+/* Add this class for a smaller header on scroll */
+header.scrolled {
+  height: 50px; /* Adjust the height as needed */
+  background-color: var(--tertiary-color); /* Change background color when scrolled */
+}
+
+/* Style the logo images */
+header img {
+  max-width: 80px;
+  height: auto;
+  margin-right: 20px;
+  filter: invert(1);
+}
+
+/* Initially hide the scrolled logo */
+.hidden {
+  display: none;
+}
+
+.menuIcon {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--secondary-color); /* hamburger color */
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--tertiary-color); /* panel color */
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--essence-color); /* font color */
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: var(--secondary-color); /* hover font color */
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}

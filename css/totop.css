@@ -1,0 +1,46 @@
+button {
+  width: 150px;
+  height: 40px;
+  background-color: #666;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+#toTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: var(--tertiary-color); /* font color */
+  background-color: var(--secondary-color); /* bg color */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999;
+  -webkit-appearance: none; /* Add this line */
+  -webkit-border-radius: 50%;
+}
+
+#toTopBtn span {
+  font-size: 24px; /* Adjust the font size as needed */
+  line-height: 1;
+}
+
+#toTopBtn:hover {
+  opacity: 0.7;
+}

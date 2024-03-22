@@ -1,0 +1,20 @@
+/* FOR Default page settings */
+
+.default-content {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.default-content h3 {
+	  text-align: center;
+}
+.default-content p {
+	  text-align: justify;
+}

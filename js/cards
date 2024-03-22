@@ -1,0 +1,30 @@
+document.getElementById('generateVCF').addEventListener('click', function(event) {
+    const vcfData = `BEGIN:VCARD
+VERSION:3.0
+N:Lastname;Firstname;;; 
+FN:Firstname Lastname
+EMAIL:example@example.com
+TEL:+1234567890
+X-WHATSAPP:https://wa.me/1234567890
+X-FACEBOOK:https://www.facebook.com/username
+X-INSTAGRAM:https://www.instagram.com/username
+X-YOUTUBE:https://www.youtube.com/channel/username
+URL:https://www.example.com
+END:VCARD`;
+
+    const blob = new Blob([vcfData], { type: 'text/vcard;charset=utf-8' });
+    const url = window.URL.createObjectURL(blob);
+
+    // Create a temporary link element
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'contact.vcf';
+
+    // Simulate a click event to trigger the download
+    document.body.appendChild(link);
+    link.click();
+
+    // Clean up
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+});

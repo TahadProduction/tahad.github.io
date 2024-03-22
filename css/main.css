@@ -1,0 +1,149 @@
+.parallax {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  padding-top: 60px; /* Add padding to the top of the content */
+  position: relative;
+  z-index: 0; /* Ensure content is above the parallax background */
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent black overlay */
+  position: absolute; /* Positioned absolutely within the section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Set the height to 100% of the parent (.parallax) */
+  z-index: 0; /* Set a higher z-index to ensure it covers the hero image */
+}
+
+.video-highlight {
+  border-radius: 10px; /* Adjust the value as needed to control the roundness of the corners */
+  overflow: hidden; /* Clip the iframe to fit within the rounded corners */
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (height divided by width) */
+  overflow: hidden;
+  border-radius: 10px; /* Adjust the value for rounded corners */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none; /* Prevents the overlay from blocking mouse interactions */
+}
+
+.section-content {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px; /* Set the maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.section-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.section-content p {
+  font-size: 18px;
+}
+
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Each benefit occupies full width on larger screens */
+    max-width: calc(50% - 20px); /* Set a maximum width to enforce two benefits side by side with gap */
+}
+
+.benefit img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.benefit h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.benefit p {
+    font-size: 16px;
+}
+
+.image-container {
+  width: 200px; /* Adjust the container size as needed */
+  height: auto;
+  perspective: 1000px; /* Set the perspective for the 3D effect */
+}
+
+.rotate-on-hover {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s; /* Add a transition for smooth animation */
+}
+
+.rotate-on-hover:hover {
+  transform: rotateY(180deg); /* You can adjust the degree of rotation as needed */
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-member img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 16px;
+}
