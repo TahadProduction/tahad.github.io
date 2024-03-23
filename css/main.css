@@ -8,24 +8,9 @@
 }
 
 .main-content {
-  text-align: center;
   height: 100%; /* Ensure the container takes up the full height of the section */
   position: absolute;
-  margin-top: clamp(25%, 30%, 35%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 0; /* Ensure content is above the parallax background */
-}
-
-.main-content h1 {
-  font-size: 36px; /* Adjust font size as needed */
-  margin-bottom: 20px; /* Add spacing below the heading */
-}
-
-.main-content p {
-  margin-top: 20px;
-  font-size: 18px; /* Adjust font size as needed */
 }
 
 .overlay {
