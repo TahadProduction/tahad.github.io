@@ -15,70 +15,87 @@ footer::before {
 }
 
 .section-content-infos {
-  text-align: center;
-  padding: 20px;
-  margin: 0 auto;
-  background-color: var(--essence-color); /* bgcolor */
-  color: var(--secondary-color); /* text color */
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: var(--essence-color); /* bgcolor */
+    color: var(--secondary-color); /* text color */
 }
 
 .section-content-infos h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .section-content-infos p {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .infos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Adjust this property as needed */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust this property as needed */
 }
 
 .info {
-  flex: 0 0 calc(33.33% - 20px); /* Adjust the width as needed (33.33% for 3 side by side) */
-  margin-bottom: 20px; /* Add margin to create space between items */
-  padding: 20px; /* Add padding for spacing within each "info" block */
-  text-align: center; /* Center-align content within each "info" block */
-  background-color: var(--essence-color); /* Add background color */
-  border-radius: 10px; /* Add border radius for rounded corners */
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width as needed (33.33% for 3 side by side) */
+    margin-bottom: 20px; /* Add margin to create space between items */
+    padding: 20px; /* Add padding for spacing within each "info" block */
+    text-align: center; /* Center-align content within each "info" block */
+    background-color: var(--essence-color); /* Add background color */
+    border-radius: 10px; /* Add border radius for rounded corners */
 }
 
 .info li {
-  list-style: none;
-  margin-left: -40px;
-  text-align: left;
+    list-style: none;
+    margin-left: -40px;
+    text-align: left;
 }
 
 .info a {
-  text-decoration: none;
-  font-size: 14px;
-  color: var(--secondary-color); /* font color */
-  transition: 0.3s;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--secondary-color); /* font color */
+    transition: 0.3s;
 }
 
 .info a:hover {
-  color: var(--tertiary-color); /* hover font color */
+    color: var(--tertiary-color); /* hover font color */
 }
 
 .info p {
-  text-decoration: none;
-  font-size: 14px;
-  color: var(--secondary-color);
-  text-align: left;
-  margin-bottom: 0px;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--secondary-color);
+    text-align: left;
+    margin-bottom: 0px;
 }
 
 .info h3 {
-  font-size: 16px; /* Increase font size for better readability */
-  margin-bottom: 5px;
-  text-align: left;
+    font-size: 16px; /* Increase font size for better readability */
+    margin-bottom: 5px;
+    text-align: left;
+}
+#email {
+    width: 180px; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px; /* Add some space between input and button */
 }
 
-@media (max-width: 768px) {
-  .info {
-    flex: 0 0 100%; /* On smaller screens, make each div occupy full width */
-  }
+#subscribe-btn {
+    padding: 10px 10px;
+    width: 100px; /* Adjust width as needed */
+    background-color: var(--tertiary-color); /* Button background color */
+    color: var(--secondary-color); /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#subscribe-btn:hover {
+    background-color: var(--secondary-color); /* Hover background color */
+    color: var(--tertiary-color); /* Hover text color */
 }
