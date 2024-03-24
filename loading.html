@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+      <meta http-equiv="Cache-Control" content="max-age=3600, public, stale-while-revalidate=604800">
+      <title>TAHAD - Malaysia Event Management</title>
+      <meta name="description" content="Loading screen for TAHAD the leading event management company in malaysia">
+      <link rel="canonical" href="https://www.tahad.co/" />
+      <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+
+        :root {
+            --font-family: 'Montserrat', sans-serif;
+            --primary-color: #272626; /* lighter dark */
+            --secondary-color: #F9F4F4; /* light red */
+            --tertiary-color: #C7372F; /* apple red */
+            --essence-color: #0f0f0f; /* darker dark */
+        }
+
+        body {
+            background-color: var(--tertiary-color);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s;
+            position: relative; /* Add this to establish a positioning context */
+        }
+
+        .logo {
+            position: fixed; /* Fix the logo to the top of the page */
+            top: 20px;
+            left: 0;
+            right: 0;
+            background-color: transparent; /* Background color for the logo container */
+            padding: 10px 0; /* Add padding to the logo container */
+            text-align: center;
+            z-index: 1000; /* Set a high z-index to ensure it's above other content */
+
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .flip-card {
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            background-color: transparent; /* Set background color to transparent */
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+            background-color: transparent;
+            color: var(--tertiary-color);
+        }
+
+        /* Add this style to make the text bold */
+        .flip-card-front p {
+            font-weight: bold;
+            font-size: 28px;
+        }
+
+        /* Style for the countdown text */
+        #countdown {
+            font-weight: bold;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo container -->
+    <div class="logo">
+        <a href = "main.html"><img src="images/logo.png" alt="Your Logo" width="100"></a>
+    </div>
+
+    <div class="fade-in flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <p>Work In Progress ..</p>
+            </div>
+            <div class="flip-card-back">
+                <div id="countdown"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Set the date we're counting down to
+        const countdownDate = new Date('March 31, 2024 00:00:00').getTime();
+
+        // Update the countdown every 1 second
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown').innerHTML = 'EXPIRED';
+            } else {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+        }, 1000);
+        
+        // Change background color when the card flips
+        const flipCard = document.querySelector('.flip-card');
+        flipCard.addEventListener('mouseenter', function() {
+            document.body.style.backgroundColor = 'var(--secondary-color)';
+        });
+        flipCard.addEventListener('mouseleave', function() {
+            document.body.style.backgroundColor = 'var(--tertiary-color)';
+        });
+
+        // Remove the fade-in class after a delay
+        setTimeout(() => {
+            document.querySelector('.fade-in').classList.remove('fade-in');
+        }, 2000); // Adjust the delay as needed
+    </script>
+</body>
+</html>
