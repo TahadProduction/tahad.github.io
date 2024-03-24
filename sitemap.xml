@@ -9,7 +9,67 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://tahad.co/main</loc>
+        <loc>https://tahad.co/loading</loc>
+        <lastmod>2024-02-21</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://tahad.co/404</loc>
+        <lastmod>2024-02-21</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://tahad.co/pages/why</loc>
+        <lastmod>2024-02-21</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://tahad.co/pages/testimonies</loc>
+        <lastmod>2024-02-21</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://tahad.co/pages/faq</loc>
+        <lastmod>2024-02-21</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://tahad.co/pages/service</loc>
+        <lastmod>2024-02-21</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://tahad.co/pages/policies</loc>
+        <lastmod>2024-02-21</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://tahad.co/pages/tnc</loc>
+        <lastmod>2024-02-21</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://tahad.co/cards/nabil</loc>
+        <lastmod>2024-02-21</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://tahad.co/cards/eezaq</loc>
+        <lastmod>2024-02-21</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://tahad.co/cards/umar</loc>
         <lastmod>2024-02-21</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
