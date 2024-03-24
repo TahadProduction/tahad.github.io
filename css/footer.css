@@ -68,6 +68,11 @@ footer::before {
     padding: 15px 5px;
 }
 
+.info a i .small {
+    font-size: 15px !important;
+    padding: 5px !important;
+}
+
 .info p {
     text-decoration: none;
     font-size: 14px;
@@ -81,12 +86,6 @@ footer::before {
     margin-bottom: 5px;
     text-align: left;
 }
-
-.small {
-    font-size: 15px !important;
-    padding: 5px !important;
-}
-
 
 #email {
     width: 180px; /* Adjust width as needed */
