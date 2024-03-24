@@ -68,7 +68,7 @@ footer::before {
     padding: 15px 5px;
 }
 
-.info a i .small {
+.small {
     font-size: 15px !important;
     padding: 5px !important;
 }
