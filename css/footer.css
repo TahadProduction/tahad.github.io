@@ -81,6 +81,13 @@ footer::before {
     margin-bottom: 5px;
     text-align: left;
 }
+
+.small {
+    font-size: 15px !important;
+    padding: 5px !important;
+}
+
+
 #email {
     width: 180px; /* Adjust width as needed */
     padding: 10px;
