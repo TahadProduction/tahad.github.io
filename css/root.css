@@ -21,17 +21,3 @@ body {
   transition: background-color 0.3s ease-in-out;
   
 }
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(199, 55, 47, 0.4); /* color background color before scrolled */
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  transition: height 0.5s ease, background-color 0.5s ease;
-}

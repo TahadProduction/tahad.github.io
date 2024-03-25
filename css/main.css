@@ -5,12 +5,29 @@
   background-size: cover;
   min-height: 100vh;
   overflow: hidden;
+  background-attachment: fixed; /* Ensure the background image remains fixed */
 }
 
 .main-content {
-  height: 100%; /* Ensure the container takes up the full height of the section */
-  position: absolute;
-  z-index: 0; /* Ensure content is above the parallax background */
+  height: 100vh; /* Ensure the container takes up the full height of the viewport */
+  z-index: 1; /* Ensure content is above the parallax background */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.content-center {
+  text-align: center; /* Center text inside */
+  color: white; /* Set text color */
+}
+
+.content-center h1 {
+  font-size: 2.5em; /* Adjust font size for h1 */
+  margin-bottom: 10px; /* Add some space between h1 and p */
+}
+
+.content-center p {
+  font-size: 1.5em; /* Adjust font size for p */
 }
 
 .overlay {
@@ -20,7 +37,7 @@
   left: 0;
   width: 100%;
   height: 100%; /* Set the height to 100% of the parent (.parallax) */
-  z-index: 0; /* Set a higher z-index to ensure it covers the hero image */
+  z-index: 0; /* Set a lower z-index to ensure it's behind the hero image */
 }
 
 .video-highlight {

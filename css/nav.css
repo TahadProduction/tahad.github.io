@@ -1,3 +1,17 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(199, 55, 47, 0.4); /* color background color before scrolled */
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  transition: height 0.5s ease, background-color 0.5s ease;
+}
+
 /* Add this class for a smaller header on scroll */
 header.scrolled {
   height: 50px; /* Adjust the height as needed */
