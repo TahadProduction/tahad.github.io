@@ -37,16 +37,24 @@
   
   </header>
   
- <section id="home" class="parallax" style="background-image: url('images/hero-images.jpeg');">
+<section id="home" class="parallax" style="background-image: url('images/hero-images.jpeg');">
     <div class="overlay"></div>
     <div class="main-content">
         <div class="content-center">
-            <h1>TAHAD PRODUCTION</h1>
-            <p>Where Your Event Matters</p>
+            <div class="logo-wrapper">
+                <img id="logo" src="images/logo2.svg" alt="logo">
+            </div>
+            <div class="typewriter-wrapper">
+                <h1>
+                    <p class="typewrite" data-period="2000" data-type='[ "Creating Experiences", "Celebrating Moments", "Inspiring Joy" ]'>
+                        <span class="wrap"></span>
+                    </p>
+                </h1>
+            </div>
         </div>
     </div>
 </section>
-  
+
   <section id="about" class="section">
     <div class="section-content">
       <h2>About</h2>
@@ -54,12 +62,12 @@
     </div>
   </section>
   
-  <section id="highlight" class="section">
+ <section id="highlight" class="section">
   <div class="section-content">
     <h2>Our Work</h2>
-    <div class="video-container">
+    <div id="videoContainer" class="video-container">
       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3-JH8gDbRU8?mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&autoplay=1&vq=hd1080&loop=1" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media"></iframe>
-      <div class="overlay"></div>
+      <div id="overlay" class="overlay"></div>
     </div>
   </div>
 </section>
@@ -175,7 +183,10 @@
 	  
 	 <script src="js/extensionRemover.js" defer></script>
    <script src="js/script.js" defer></script>
+   <script src="js/vids.js" defer></script>
 	 <script src="js/paralax.js" defer></script>
+   <script src="js/totop.js" defer></script>
+   <script src="js/anim.js" defer></script>
    <script src="js/subs.js" defer></script>
    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP47NM0ZEJ"></script>

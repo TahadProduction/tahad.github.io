@@ -1,3 +1,24 @@
+#logo {
+  width: 300px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  filter: invert(1);
+  opacity: 0; /* Initially set opacity to 0 */
+  transform: scale(1.2); /* Initially set scale to 120% */
+  animation: fadeInAndScale 2s ease forwards; /* Apply the fadeInAndScale animation */
+}
+
+@keyframes fadeInAndScale {
+  from {
+    opacity: 0; /* Start from fully transparent */
+    transform: scale(1.2); /* Start at 120% scale */
+  }
+  to {
+    opacity: 1; /* Fade in to fully opaque */
+    transform: scale(1); /* Scale down to 100% */
+  }
+}
+
+
 .parallax {
   position: relative;
   background-position: center;
@@ -21,14 +42,14 @@
   color: white; /* Set text color */
 }
 
-.content-center h1 {
-  font-size: 2.5em; /* Adjust font size for h1 */
-  margin-bottom: 10px; /* Add some space between h1 and p */
+.logo-wrapper {
+  margin-bottom: 20px; /* Add space between logo and typewriter */
 }
 
-.content-center p {
-  font-size: 1.5em; /* Adjust font size for p */
+.typewriter-wrapper {
+  width: 100%; /* Ensure typewriter takes full width */
 }
+
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent black overlay */
@@ -37,7 +58,8 @@
   left: 0;
   width: 100%;
   height: 100%; /* Set the height to 100% of the parent (.parallax) */
-  z-index: 0; /* Set a lower z-index to ensure it's behind the hero image */
+  z-index: 1; /* Set a higher z-index to ensure it's above the video */
+  pointer-events: auto; /* Allow the overlay to block mouse interactions */
 }
 
 .video-highlight {
@@ -59,16 +81,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.overlay2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    pointer-events: none; /* Prevents the overlay from blocking mouse interactions */
+  pointer-events: none; /* Disable mouse and touch interactions on the iframe */
 }
 
 .section-content {
